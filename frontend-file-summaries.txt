@@ -1,0 +1,9 @@
+{
+  "frontend/src/App.tsx": "Root app component that renders the single FireFactsPage.",
+  "frontend/src/hooks/useQueries.ts": "React Query mutation hook for fetching random facts from the backend, now explicitly typed as `useMutation<string, Error, void>` to satisfy the lint/type checker.",
+  "frontend/src/pages/FireFactsPage.tsx": "Full-page layout with header, fire animation, fact display, and footer; all styling uses Tailwind utility classes or inline styles to avoid eslint-plugin-tailwindcss no-custom-classname violations.",
+  "frontend/src/components/FireAnimation.tsx": "Fire animation component with layered flames, coals, logs, smoke, and JS-spawned embers; all styling uses inline style objects instead of custom CSS class names to avoid lint errors.",
+  "frontend/src/components/FactDisplay.tsx": "Fact display card with fire-themed button that fetches random facts from the backend; all styling uses Tailwind utility classes or inline styles to avoid custom classname lint errors.",
+  "frontend/src/index.css": "Global styles with OKLCH fire-themed design tokens and all keyframe animation definitions (flame flicker, ember rise, smoke, fact reveal, spin) referenced by inline style animation names.",
+  "frontend/tailwind.config.js": "Tailwind config with fire-themed font families, full color token mappings, and standard shadcn/ui configuration; removed custom fire color tokens that were unused after the inline-style refactor."
+}

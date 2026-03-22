@@ -1,0 +1,85 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fire Animation Random Fact Site",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a visually striking fire CSS/JS animation as the centerpiece of the page with layered animated elements, flames, embers, and glow effects",
+      "acceptanceCriteria": [
+        "A fire animation is prominently displayed on the page",
+        "The animation uses CSS keyframes for flame flicker and glow effects",
+        "JavaScript adds dynamic particle/ember elements to enhance realism",
+        "The animation runs continuously and smoothly on load"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FireAnimation.tsx",
+          "operation": "create",
+          "description": "Create a React component that renders a layered fire animation using CSS keyframes for flame flicker and glow, and JavaScript to dynamically generate and animate particle/ember elements. The component should render multiple flame layers with varying animation speeds and opacity to simulate realistic fire movement. Use CSS for base flame shapes and glow effects, and useEffect to spawn, animate, and remove ember particles continuously."
+        },
+        {
+          "path": "frontend/src/styles/fire-animation.css",
+          "operation": "create",
+          "description": "Define CSS keyframe animations for flame flicker (scale, opacity, transform), glow pulse effects, and ember particle movement. Include layered animations with different durations and delays to create realistic fire behavior. Use warm color gradients (orange, red, yellow) and blur/shadow effects for glow."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a fire-themed 'Get a Random Fact' button that fetches and displays a random fact from the backend with a smooth reveal animation",
+      "acceptanceCriteria": [
+        "A clearly visible button is present on the page",
+        "Clicking the button displays a random fact from a hardcoded collection",
+        "Each click has a reasonable chance of showing a different fact",
+        "The fact appears with a smooth CSS transition or animation",
+        "At least 20 facts are included in the collection"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FactDisplay.tsx",
+          "operation": "create",
+          "description": "Create a React component that displays a random fact fetched from the backend. Include a fire-themed button (styled with glowing ember or molten look using CSS gradients, shadows, and hover effects). On button click, call the backend's getRandomFact() method and display the returned fact with a smooth CSS reveal animation (fade-in, slide-up, or similar). Manage loading and error states appropriately."
+        },
+        {
+          "path": "frontend/src/styles/fact-display.css",
+          "operation": "create",
+          "description": "Define CSS styles for the fact display card and button. Style the button with fire-themed colors (glowing orange/red gradient, box-shadow for ember glow, hover state with increased brightness). Create a CSS animation for the fact reveal (e.g., @keyframes fadeSlideIn with opacity and transform changes). Style the fact card with dark background, warm borders, and dramatic typography."
+        },
+        {
+          "path": "frontend/src/hooks/useRandomFact.ts",
+          "operation": "create",
+          "description": "Create a custom React hook that manages fetching random facts from the backend. The hook should call the backend's getRandomFact() query method, handle loading and error states, and return the current fact along with a function to fetch a new one. Use the backend actor from core-infrastructure to make the query call."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Apply a cohesive fire-themed visual design across the entire page with dark background, warm color palette, and dramatic typography",
+      "acceptanceCriteria": [
+        "Page background is dark (near-black or deep charcoal)",
+        "Typography and accent colors use warm orange, red, and amber tones",
+        "The fact display area is styled as a card or panel with fire-themed styling",
+        "The overall design feels cohesive and dramatic",
+        "No off-theme colors (e.g., corporate blue) appear anywhere"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update the global styles to apply a fire-themed design system. Set the body background to near-black or deep charcoal (#0a0a0a or similar). Define CSS custom properties for the fire color palette (orange, red, amber, yellow tones). Update base typography to use dramatic font weights and warm accent colors. Ensure all global styles align with the fire theme."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind configuration to include fire-themed colors in the color palette (e.g., 'flame-orange', 'ember-red', 'coal-black', 'glow-amber'). Add custom font weights and spacing if needed to support the dramatic fire aesthetic. Ensure the theme matches the warm, dark fire design requirements."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Update the main App component to integrate the FireAnimation and FactDisplay components. Structure the layout to position the fire animation as the centerpiece with the fact display card prominently framed nearby. Apply fire-themed container styling (dark background, warm borders). Remove any default starter content and ensure the page layout emphasizes the fire animation and fact feature as focal points."
+        }
+      ]
+    }
+  ]
+}

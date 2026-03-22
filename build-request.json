@@ -1,0 +1,100 @@
+{
+  "kind": "build_request",
+  "title": "Fire Animation Random Fact Site",
+  "projectName": "Flame Facts",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a visually striking fire CSS/JS animation as the centerpiece of the page. The fire effect should use layered animated elements (flames, embers, glow) built with CSS keyframe animations and JavaScript-driven particle effects to simulate realistic, flickering fire.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "fire css and js animation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A fire animation is prominently displayed on the page",
+        "The animation uses CSS keyframes for flame flicker and glow effects",
+        "JavaScript adds dynamic particle/ember elements to enhance realism",
+        "The animation runs continuously and smoothly on load"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a 'Get a Random Fact' button styled to match the fire theme (e.g., glowing ember or molten look). When clicked, it displays a new random fact drawn from a built-in collection of at least 20 interesting facts. The fact text should appear with a smooth reveal animation.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "gives you a random fact when u click a button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A clearly visible button is present on the page",
+        "Clicking the button displays a random fact from a hardcoded collection",
+        "Each click has a reasonable chance of showing a different fact",
+        "The fact appears with a smooth CSS transition or animation",
+        "At least 20 facts are included in the collection"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Apply a cohesive fire-themed visual design across the entire page: dark background (near-black or deep charcoal), warm orange/red/amber color palette for text and UI elements, dramatic typography, and a layout that frames the fire animation and fact display card as focal points. Enforce the theme consistently across all components.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "fire css and js animation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page background is dark (near-black or deep charcoal)",
+        "Typography and accent colors use warm orange, red, and amber tones",
+        "The fact display area is styled as a card or panel with fire-themed styling",
+        "The overall design feels cohesive and dramatic",
+        "No off-theme colors (e.g., corporate blue) appear anywhere"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Store the collection of random facts in the Motoko backend as a stable array. Expose a query method `getRandomFact()` that returns a random fact string. The frontend calls this method when the button is clicked.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "gives you a random fact when u click a button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend has a stable array of at least 20 facts",
+        "A `getRandomFact()` query method is exposed",
+        "The method returns a different fact pseudo-randomly on each call",
+        "Frontend successfully retrieves and displays facts from the backend"
+      ]
+    }
+  ],
+  "constraints": [
+    "Fire animation must be implemented purely with CSS and JS — no external animation libraries (e.g., no GSAP, anime.js)",
+    "Facts must be served from the Motoko backend, not hardcoded only in the frontend"
+  ],
+  "nonGoals": [
+    "User accounts or authentication",
+    "Ability for users to submit or save facts",
+    "Social sharing features",
+    "Mobile-specific native features"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

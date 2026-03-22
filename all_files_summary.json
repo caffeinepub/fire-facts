@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Motoko actor that holds a list of 10 trivia facts and exposes two query/update methods: one to get the array size and one to return a random fact using a crypto RNG.",
+  "feature_evidence.json": "Feature evidence report mapping three product features (fire animation, random fact button, fire-themed design) to their implementing source files and test IDs.",
+  "frontend-file-summaries.txt": "A JSON document containing one-line summaries of each frontend source file, serving as a quick reference for the project's frontend structure.",
+  "frontend/index.css": "Global Tailwind CSS entry point that defines OKLCH-based CSS custom properties for light and dark theme design tokens (colors, radius, sidebar, charts).",
+  "frontend/index.html": "Minimal HTML shell titled 'Fire Facts' that mounts the React app at the `#root` div and loads the main TypeScript entry point.",
+  "frontend/src/App.tsx": "Root React component that simply renders the FireFactsPage as the sole page of the application.",
+  "frontend/src/components/FactDisplay.tsx": "Fire-themed card component with a 'Get a Random Fact' button that fetches a fact from the backend via mutation and displays it with a smooth reveal animation using inline styles.",
+  "frontend/src/components/FireAnimation.tsx": "Animated fire component that renders layered flames, logs, coals, smoke, and ground glow using inline styles, with JavaScript-spawned ember particles via setInterval.",
+  "frontend/src/hooks/useActor.ts": "React Query hook that creates and caches an ICP backend actor, using the current Internet Identity and invalidating dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context provider and hook for Internet Identity authentication, managing AuthClient lifecycle, login/logout state, and persisting identity across page reloads.",
+  "frontend/src/hooks/useQueries.ts": "Typed React Query mutation hook that calls the backend's `getRandomFact` method via the ICP actor and returns the result as a string.",
+  "frontend/src/index.css": "Global CSS file that sets up Tailwind directives, imports Google Fonts (Cinzel, Inter), defines OKLCH-based CSS custom properties for the dark fire-themed design system, and declares keyframe animations for fire effects (flame flicker, coal glow, smoke rise, etc.).",
+  "frontend/src/main.tsx": "React app entry point that mounts the app with ReactQuery and InternetIdentityProvider wrappers around the root App component.",
+  "frontend/src/pages/FireFactsPage.tsx": "Main page component that composes the full fire-themed UI layout including a header, FireAnimation component, FactDisplay component, and a footer with a caffeine.ai attribution link.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the theme with OKLCH color tokens, Cinzel/Inter font families, custom border radii, accordion keyframes, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state metadata tracking existing features (fire animation, random fact button, fire-themed design) and a pending new feature request (AR-4) to store facts in a Motoko backend and expose a getRandomFact() query method."
+}

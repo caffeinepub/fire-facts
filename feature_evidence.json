@@ -1,0 +1,61 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-visually-striking-fire-css-js-animation-as-the-centerpiece-of-the-page-the-fire-effect-should-use-layered-animated-elements-flames-embers-glow-built-with-css-keyframe-animations-and-javascript-driven-particle-effects-to-simulate-realistic-flickering-fire",
+      "featureTitle": "Create a visually striking fire CSS/JS animation as the centerpiece of the page. The fire effect should use layered animated elements (flames, embers, glow) built with CSS keyframe animations and JavaScript-driven particle effects to simulate realistic, flickering fire.",
+      "files": [
+        "frontend/src/components/FireAnimation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-get-a-random-fact-button-styled-to-match-the-fire-theme-e-g-glowing-ember-or-molten-look-when-clicked-it-displays-a-new-random-fact-drawn-from-a-built-in-collection-of-at-least-20-interesting-facts-the-fact-text-should-appear-with-a-smooth-reveal-animation",
+      "featureTitle": "Add a 'Get a Random Fact' button styled to match the fire theme (e.g., glowing ember or molten look). When clicked, it displays a new random fact drawn from a built-in collection of at least 20 interesting facts. The fact text should appear with a smooth reveal animation.",
+      "files": [
+        "frontend/src/components/FactDisplay.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-fire-themed-visual-design-across-the-entire-page-dark-background-near-black-or-deep-charcoal-warm-orange-red-amber-color-palette-for-text-and-ui-elements-dramatic-typography-and-a-layout-that-frames-the-fire-animation-and-fact-display-card-as-focal-points-enforce-the-theme-consistently-across-all-components",
+      "featureTitle": "Apply a cohesive fire-themed visual design across the entire page: dark background (near-black or deep charcoal), warm orange/red/amber color palette for text and UI elements, dramatic typography, and a layout that frames the fire animation and fact display card as focal points. Enforce the theme consistently across all components.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

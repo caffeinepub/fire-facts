@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "A single-page website featuring a fire CSS/JS animation with a button that displays a random fact when clicked.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-visually-striking-fire-css-js-animation-as-the-centerpiece-of-the-page-the-fire-effect-should-use-layered-animated-elements-flames-embers-glow-built-with-css-keyframe-animations-and-javascript-driven-particle-effects-to-simulate-realistic-flickering-fire",
+      "title": "Create a visually striking fire CSS/JS animation as the centerpiece of the page. The fire effect should use layered animated elements (flames, embers, glow) built with CSS keyframe animations and JavaScript-driven particle effects to simulate realistic, flickering fire.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-get-a-random-fact-button-styled-to-match-the-fire-theme-e-g-glowing-ember-or-molten-look-when-clicked-it-displays-a-new-random-fact-drawn-from-a-built-in-collection-of-at-least-20-interesting-facts-the-fact-text-should-appear-with-a-smooth-reveal-animation",
+      "title": "Add a 'Get a Random Fact' button styled to match the fire theme (e.g., glowing ember or molten look). When clicked, it displays a new random fact drawn from a built-in collection of at least 20 interesting facts. The fact text should appear with a smooth reveal animation.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-fire-themed-visual-design-across-the-entire-page-dark-background-near-black-or-deep-charcoal-warm-orange-red-amber-color-palette-for-text-and-ui-elements-dramatic-typography-and-a-layout-that-frames-the-fire-animation-and-fact-display-card-as-focal-points-enforce-the-theme-consistently-across-all-components",
+      "title": "Apply a cohesive fire-themed visual design across the entire page: dark background (near-black or deep charcoal), warm orange/red/amber color palette for text and UI elements, dramatic typography, and a layout that frames the fire animation and fact display card as focal points. Enforce the theme consistently across all components.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-4",
+      "summary": "Store the collection of random facts in the Motoko backend as a stable array. Expose a query method `getRandomFact()` that returns a random fact string. The frontend calls this method when the button is clicked.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Fire Facts",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

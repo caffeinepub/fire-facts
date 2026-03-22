@@ -1,0 +1,70 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T14:12:56.853Z",
+  "summary": "The diff implements most requirements with a fire animation, fact display with backend integration, and fire-themed design. However, the backend facts array contains only 10 facts instead of the required minimum of 20, the array is not declared as stable, and the getRandomFact() method is declared as shared (update call) rather than query. The frontend has no visible hardcoded collection of 20+ facts either.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "Backend has a stable array of at least 20 facts",
+      "reason": "The backend facts array in main.mo contains only 10 facts (not 20+), and the array is not declared with the stable keyword.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "A getRandomFact() query method is exposed",
+      "reason": "The method is declared as public shared (an update call) rather than public query, violating the requirement for a query method.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "requirement": "At least 20 facts are included in the collection",
+      "reason": "The frontend FactDisplay component relies solely on backend calls with no visible hardcoded collection of 20+ facts, and the backend itself only has 10 facts.",
+      "evidence": [
+        "frontend/src/components/FactDisplay.tsx",
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication provider and login infrastructure",
+      "reason": "The build request explicitly lists user accounts and authentication as a non-goal, yet a full InternetIdentityProvider, AuthClient integration, useInternetIdentity hook, and identity-based actor creation are implemented.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "getArraySize() public query method on the backend",
+      "reason": "An extra getArraySize() method is exposed on the backend that was not requested in any requirement.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.85,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/FactDisplay.tsx",
+    "frontend/src/components/FireAnimation.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/FireFactsPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
